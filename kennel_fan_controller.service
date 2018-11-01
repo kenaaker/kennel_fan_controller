@@ -1,0 +1,12 @@
+[Unit]
+Description=Kennel Fan Controller service
+Requires=network-online.target nss-user-lookup.target
+After=network.target network-online.target nss-user-lookup.target
+
+[Service]
+User=
+WorkingDirectory=/home/kennel_fan_ctrlr
+ExecStart=/home/kennel_fan_ctrlr/bin/kennel_fan_controller
+
+[Install]
+WantedBy=multi-user.target
